@@ -203,6 +203,13 @@ var education = {
     }
 };
 
+var appendMapAndFooter = function()
+{
+    $("#map-div").append(googleMap);
+    //$("#main").append(internationalizeButton);
+    $("#footerContacts").append($("#topContacts").html());
+}
+
 function replaceData(htmlString, value)
 {
     return htmlString.replace("%data%", value);
@@ -218,6 +225,4 @@ bio.display();
 work.display();
 projects.display();
 education.display();
-$("#map-div").append(googleMap);
-//$("#main").append(internationalizeButton);
-$("#footerContacts").append($("#topContacts").html());
+appendMapAndFooter();
