@@ -48,14 +48,11 @@ function buildBio()
                 Object.getOwnPropertyNames(bio.contacts).forEach(function(contact) {
                     $("#topContacts").append(replaceData(HTMLcontactGeneric.replace("%contact%", contact), bio.contacts[contact]));
                 });
-                $("#header").append(biopic);
-                $("#header").append(welcomMessage);
-                $("#header").append(HTMLskillsStart);
+                var header = $("#header").append(biopic).append(welcomMessage).append(HTMLskillsStart);
                 bio.skills.forEach(function(skill){
                     $("#skills").append(replaceData(HTMLskills, skill));
                 });
-                $("#header").prepend(formattedRole);
-                $("#header").prepend(formattedName);
+                header.prepend(formattedRole).prepend(formattedName);
             }
         };
 
