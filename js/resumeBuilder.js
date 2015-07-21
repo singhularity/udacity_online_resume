@@ -2,24 +2,6 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-/* BIO
- name : string
- role : string
- contacts : an object with
-    mobile: string
-    email: string
-    github: string
-    twitter: string
-    location: string
- welcomeMessage: string
- skills: array of strings
- biopic: url
- display: function
- */
-
-
-
-
 var bio =
 {
     name: "Saurabh Singh",
@@ -55,16 +37,6 @@ var bio =
     }
 };
 
-
-/*
- projects: array of objects with
- title: string
- dates: string (works with a hyphen between them)
- description: string
- images: array with string urls
- display: function
- */
-
 var projects =
 {
    projects: [{
@@ -91,15 +63,6 @@ var projects =
     }
 };
 
-/*
- jobs: array of objects with
-    employer: string
-    title: string
-    location: string
-    dates: string (works with a hyphen between them)
-    description: string
- display: function
- */
 var work = {
     jobs: [{
             employer: "Markit North America",
@@ -114,7 +77,7 @@ var work = {
             title: "Software Developer II",
             location: "Brooklyn, NY",
             dates: "2013-Current",
-            description: "Am responsible for making sure kids learn.",
+            description: "I'm responsible for making sure kids learn.",
             url: "www.amplify.com"
         }],
     display: function()
@@ -131,21 +94,7 @@ var work = {
         });
     }
 };
-/*
- schools: array of objects with
-     name: string
-     location: string
-     degree: string
-     majors: array of strings
-     dates: integer (graduation date)
-     url: string
- onlineCourses: array with
-     title: string
-     school: string
-     date: integer (date finished)
-     url: string
- display: function
- */
+
 var education = {
     schools: [
         {
