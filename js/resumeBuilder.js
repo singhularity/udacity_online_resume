@@ -71,14 +71,15 @@ var projects =
         title: "Distributed Caching",
         dates: "2010 - 2012",
         description: "Compare different distibuted caching strategies",
-        images: ["http://gen.xyz/wp-content/themes/xyz/images/xyz-logo-purple.png",
-            "http://gen.xyz/wp-content/themes/xyz/images/xyz-logo-purple.png"]
+        images: ["images/dfs.png",
+            "images/hint_based_caching.png"],
+        url: "https://sites.google.com/site/ssmscapproject/"
     }],
     display: function()
     {
         $("#projects").append(HTMLprojectStart);
         this.projects.forEach(function (project) {
-            var projectTitle = replaceData(HTMLprojectTitle, project.title);
+            var projectTitle = replaceData(HTMLprojectTitle, project.title).replace("#", project.url);
             var projectDates = replaceData(HTMLprojectDates, project.dates);
             var projectDescription = replaceData(HTMLprojectDescription, project.description);
             var projectEntry = $(".project-entry").append(projectTitle).append(projectDates).append(projectDescription);
@@ -101,13 +102,21 @@ var projects =
  */
 var work = {
     jobs: [{
-        employer: "Markit North America",
-        title: "Associate",
-        location: "New York, NY",
-        dates: "2010-2013",
-        description: "Was responsible for making sure that we did not lose money at the end of the day.",
-        url: "www.markit.com"
-    }],
+            employer: "Markit North America",
+            title: "Associate",
+            location: "New York, NY",
+            dates: "2010-2013",
+            description: "Was responsible for making sure that we did not lose money at the end of the day.",
+            url: "www.markit.com"
+    },
+        {
+            employer: "Amplify Education Inc",
+            title: "Software Developer II",
+            location: "Brooklyn, NY",
+            dates: "2013-Current",
+            description: "Am responsible for making sure kids learn.",
+            url: "www.amplify.com"
+        }],
     display: function()
     {
         $("#workExperience").append(HTMLworkStart);
@@ -160,7 +169,7 @@ var education = {
             title: "Oracle Certified Java Programmer",
             school: "Oracle",
             dates: 2012,
-            url: "http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=653&get_params=p_id:157"
+            url: "http://www.oracle.com/index.html"
         },
         {
             title: "Functional Programming Principles in Scala",
@@ -199,7 +208,16 @@ function replaceData(htmlString, value)
     return htmlString.replace("%data%", value);
 }
 
+function inName(name)
+{
+    var nameParts = $("#name").text().split(" ");
+    return nameParts[0] + " " + nameParts[1].toUpperCase();
+}
+
 bio.display();
 work.display();
 projects.display();
 education.display();
+$("#map-div").append(googleMap);
+//$("#main").append(internationalizeButton);
+$("#footerContacts").append($("#topContacts").html());
