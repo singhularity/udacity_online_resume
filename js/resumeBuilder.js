@@ -8,7 +8,7 @@ var bio =
     role: "Software Developer",
     contacts:
         {
-            mobile: "585-705-0307",
+            mobile: "585-585-0000",
             email: "singhulariti@gmail.com",
             github: "https://github.com/singhularity",
             twitter: "@singhulariti",
