@@ -20,9 +20,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
-
+  <link href="css/grid.css" rel="stylesheet">
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
+
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -59,6 +60,25 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
+    <div style="position: fixed" class="row">
+      <div class="col-12 menuButtonDiv">
+        <button id="menuButton">
+            <h4 class="menuButton-H4">Navigation</h4>
+        </button>
+      </div>
+    </div>
+    <div style="position: fixed" class="row" id="menuList">
+        <div class="col-12 menu">
+          <ul id="menuUl">
+            <li><a href="#header">Information</a></li>
+            <li><a href="#workExperience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#map-div">Interactive Maps</a></li>
+        </ul>
+      </div>
+
+    </div>
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
     </div>

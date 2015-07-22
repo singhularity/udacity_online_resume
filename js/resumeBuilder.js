@@ -175,3 +175,12 @@ work.display();
 projects.display();
 education.display();
 appendMapAndFooter();
+document.getElementById("menuButton").addEventListener("mouseenter",function(e){
+    $(".menu").toggle();
+    $("#menuButton").toggle();
+});
+
+document.getElementById("menuList").addEventListener("mouseleave",function(e){
+    $(".menu").toggle();
+    $("#menuButton").toggle();
+});
